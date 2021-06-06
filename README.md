@@ -1,3 +1,3 @@
 # urlShortener
 
-[visit website &rarr;](sonuyadav.great-site.net)
+[visit website &rarr;](http://sonuyadav.great-site.net)
