@@ -1,5 +1,5 @@
 <?php 
-  include "databases/config.php";
+  include "./database/config.php";
   $new_url = "";
   if(isset($_GET)){
     foreach($_GET as $key=>$val){

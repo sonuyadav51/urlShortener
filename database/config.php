@@ -1,7 +1,7 @@
 <?php 
     
 
-    $domain = "sonuyadav.great-site.net/"; 
+    $domain = "sonu-url-shortener.herokuapp.com/"; 
     $host = "remotemysql.com";
     $user = "3zcZM3njR0"; //Database username
     $pass = "IWE517fJvF"; //Database password
