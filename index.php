@@ -1,5 +1,5 @@
 <?php 
-  include "php/config.php";
+  include "databases/config.php";
   $new_url = "";
   if(isset($_GET)){
     foreach($_GET as $key=>$val){
@@ -22,14 +22,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
   <title>URL Shortener</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Iconsout Link for Icons -->
+
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 </head>
 <body>
-
-  <div class="wrapper">
+   <div class="wrapper">
+       <h4 style="margin:auto; text-align:center;">Enter Your URL which you want to shorten.</h4>
+   </div>
+  <div class="wrapper" style="margin-top:20px;">
   
     <form action="#" autocomplete="off">
       <input type="text" spellcheck="false" name="full_url" placeholder="Enter or paste a long url" required>
@@ -40,7 +46,7 @@
       $sql2 = mysqli_query($conn, "SELECT * FROM url ORDER BY id DESC");
       if(mysqli_num_rows($sql2) > 0){;
         ?>
-          <div class="statistics">
+          <div class="statistics" style="display:none;">
             <?php
               $sql3 = mysqli_query($conn, "SELECT COUNT(*) FROM url");
               $res = mysqli_fetch_assoc($sql3);
@@ -54,7 +60,7 @@
             <span>Total Links: <span><?php echo end($res) ?></span> & Total Clicks: <span><?php echo $total ?></span></span>
             <a href="php/delete.php?delete=all">Clear All</a>
         </div>
-        <div class="urls-area">
+        <div class="urls-area" style="display:none">
           <div class="title">
             <li>Shorten URL</li>
             <li>Original URL</li>

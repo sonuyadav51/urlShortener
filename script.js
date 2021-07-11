@@ -23,8 +23,8 @@ shortenBtn.onclick = ()=>{
                 blurEffect.style.display = "block";
                 popupBox.classList.add("show");
 
-                //paste your url here. Like this sonuyadav.in/
-                let domain = "sonuyadav.in/";
+                //paste your url here. Like this: codingnepalweb.com/
+                let domain = "sonuyadav.great-site.net/";
                 shortenURL.value = domain + data;
                 copyIcon.onclick = ()=>{
                     shortenURL.select();
