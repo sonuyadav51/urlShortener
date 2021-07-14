@@ -59,7 +59,7 @@
               }
             ?>
             <span>Total Links: <span><?php echo end($res) ?></span> & Total Clicks: <span><?php echo $total ?></span></span>
-            <a href="php/delete.php?delete=all">Clear All</a>
+            <a href="database/delete.php?delete=all">Clear All</a>
         </div>
         <div class="urls-area" style="display:none">
           <div class="title">
@@ -94,7 +94,7 @@
                 </li> 
               </li>
                 <li><?php echo $row['clicks'] ?></li>
-                <li><a href="php/delete.php?id=<?php echo $row['shorten_url'] ?>">Delete</a></li>
+                <li><a href="database/delete.php?id=<?php echo $row['shorten_url'] ?>">Delete</a></li>
               </div>
               <?php
             }
